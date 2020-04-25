@@ -7,7 +7,7 @@ public class ACItems {
     //region Flint
     public static Item flint_hatchet;
     public static Item flint_knife;
-    public static Item treetap;
+    public static Item wooden_treetap;
     //endregion
 
     //endregion
@@ -18,5 +18,11 @@ public class ACItems {
     public static Item plantfibres;
     public static Item twine;
     public static Item treesap;
+    //endregion
+
+    //region Item Blocks
+    //region Wood
+    public static Item sugarmaple_log;
+    //endregion
     //endregion
 }

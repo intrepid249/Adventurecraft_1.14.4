@@ -20,7 +20,7 @@
                   "condition": "minecraft:survives_explosion"
                 }
               ],
-              "name": "minecraft:oak_wood"
+              "name": "adventurecraft:sugarmaple_log"
             },
             {
               "type": "minecraft:item",

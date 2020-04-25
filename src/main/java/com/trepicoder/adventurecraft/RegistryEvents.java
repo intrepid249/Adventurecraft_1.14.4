@@ -1,9 +1,13 @@
 package com.trepicoder.adventurecraft;
 
+import com.trepicoder.adventurecraft.blocks.ACWoodLogBlock;
+import com.trepicoder.adventurecraft.registries.ACBlocks;
 import com.trepicoder.adventurecraft.registries.ACItemGroup;
 import com.trepicoder.adventurecraft.registries.ACItems;
 import com.trepicoder.adventurecraft.registries.ACToolMaterials;
 import net.minecraft.block.Block;
+import net.minecraft.block.SoundType;
+import net.minecraft.block.material.Material;
 import net.minecraft.item.*;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.event.RegistryEvent;
@@ -24,11 +28,12 @@ public class RegistryEvents {
                 // NB. p_i48530_3_ = Attack speed. Adds 4 to the parameter input
                 // NB. p_i48530_2_ = Attack damage modifier. Adds 1 + parameter input to the tool material attack damage
                 ACItems.flint_hatchet = new AxeItem(ACToolMaterials.FLINT, 2f, 1.2f, new Item.Properties().group(ACItemGroup.TOOLS))
-                        .setRegistryName(location("tools/flint_hatchet")),
+                        .setRegistryName(location("flint_hatchet")),
 
                 ACItems.flint_knife = new SwordItem(ACToolMaterials.FLINT, -1, 2.4f, new Item.Properties().group(ACItemGroup.TOOLS))
-                        .setRegistryName(location("tools/flint_knife")),
-                ACItems.treetap = new
+                        .setRegistryName(location("flint_knife")),
+                ACItems.wooden_treetap = new AxeItem(ACToolMaterials.WOOD, -1, 2.5f, new Item.Properties().group(ACItemGroup.TOOLS))
+                        .setRegistryName(location("wooden_treetap")),
                 //endregion
 
                 //endregion
@@ -37,18 +42,29 @@ public class RegistryEvents {
 
                 //region Misc
                 ACItems.plantfibres = new Item(new Item.Properties().group(ACItemGroup.MISC))
-                        .setRegistryName(location("misc/plantfibres")),
+                        .setRegistryName(location("plantfibres")),
                 ACItems.twine = new Item(new Item.Properties().group(ACItemGroup.MISC))
-                        .setRegistryName(location("misc/twine")),
+                        .setRegistryName(location("twine")),
                 ACItems.treesap = new Item(new Item.Properties().group(ACItemGroup.MISC))
-                        .setRegistryName(location("misc/treesap"))
+                        .setRegistryName(location("treesap")),
+                //endregion
+
+                //region Item Blocks
+                ACItems.sugarmaple_log = new BlockItem(ACBlocks.sugarmaple_log, new Item.Properties().group(ACItemGroup.BUILDINGBLOCKS))
+                        .setRegistryName(location("sugarmaple_log"))
                 //endregion
         );
     }
 
     @SubscribeEvent
     public static void registerBlocks(final RegistryEvent.Register<Block> event) {
+        event.getRegistry().registerAll(
+                //region Wood
+                ACBlocks.sugarmaple_log = new ACWoodLogBlock(Block.Properties.create(Material.WOOD)
+                        .hardnessAndResistance(2.0f).sound(SoundType.WOOD)).setRegistryName(location("sugarmaple_log"))
 
+                //endregion
+        );
     }
 
     private static ResourceLocation location(String name) {

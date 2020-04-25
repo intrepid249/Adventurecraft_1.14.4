@@ -1,7 +1,7 @@
 {
   "replace": false,
   "values": [
-    "adventurecraft:tools/flint_hatchet",
+    "adventurecraft:flint_hatchet",
     "minecraft:stone_axe"
   ]
 }

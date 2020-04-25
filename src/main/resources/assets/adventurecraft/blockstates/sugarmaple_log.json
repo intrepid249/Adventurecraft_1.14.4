@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "axis=y": {"model": "adventurecraft:block/sugarmaple_log"},
+    "axis=z": {"model": "adventurecraft:block/sugarmaple_log", "x": 90},
+    "axis=x": {"model": "adventurecraft:block/sugarmaple_log", "x": 90, "y": 90}
+  }
+}

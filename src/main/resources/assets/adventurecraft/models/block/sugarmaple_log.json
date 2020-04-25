@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_column",
+  "textures": {
+    "end": "adventurecraft:block/sugarmaple_log_top",
+    "side": "adventurecraft:block/sugarmaple_log"
+  }
+}

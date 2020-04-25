@@ -26,7 +26,7 @@
                 {
                   "condition": "minecraft:match_tool",
                   "predicate": {
-                    "item": "adventurecraft:tools/flint_knife"
+                    "item": "adventurecraft:flint_knife"
                   }
                 },
                 {
@@ -34,7 +34,7 @@
                   "chance": 0.167
                 }
               ],
-              "name": "adventurecraft:misc/plantfibres"
+              "name": "adventurecraft:plantfibres"
             },
             {
               "type": "minecraft:item",
@@ -44,7 +44,7 @@
                   "chance": 0.1
                 }
               ],
-              "name": "adventurecraft:misc/plantfibres"
+              "name": "adventurecraft:plantfibres"
             },
             {
               "type": "minecraft:item",

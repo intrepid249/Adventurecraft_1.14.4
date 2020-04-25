@@ -1,10 +1,16 @@
 {
-  "item.adventurecraft.tools.flint_hatchet": "Flint Hatchet",
-  "item.adventurecraft.tools.flint_knife": "Flint Knife",
-  "item.adventurecraft.tools.treetap": "Sappy Wappy Sap Tap",
+  "item.adventurecraft.flint_hatchet": "Flint Hatchet",
+  "item.adventurecraft.flint_knife": "Flint Knife",
+  "item.adventurecraft.wooden_treetap": "Trazoo",
 
 
-  "item.adventurecraft.misc.plantfibres": "Plant Fibres",
-  "item.adventurecraft.misc.twine": "Plant Twine",
-  "item.adventurecraft.misc.treesap": "Tree Sap"
+  "item.adventurecraft.plantfibres": "Plant Fibres",
+  "item.adventurecraft.twine": "Plant Twine",
+  "item.adventurecraft.treesap": "Tree Sap",
+
+  "block.adventurecraft.sugarmaple_log": "Sugarmaple Log",
+
+  "itemgroup.adventurecraft_misc": "Adventurecraft Misc Items",
+  "itemgroup.adventurecraft_tools": "Adventurecraft Tools",
+  "itemgroup.adventurecraft_building": "Adventurecraft Building Blocks"
 }

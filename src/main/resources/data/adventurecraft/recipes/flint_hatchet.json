@@ -9,13 +9,13 @@
       "tag": "adventurecraft:stick"
     },
     "#": {
-      "item": "adventurecraft:misc/twine"
+      "item": "adventurecraft:twine"
     },
     "x": {
       "item": "minecraft:flint"
     }
   },
   "result": {
-    "item": "adventurecraft:tools/flint_hatchet"
+    "item": "adventurecraft:flint_hatchet"
   }
 }
