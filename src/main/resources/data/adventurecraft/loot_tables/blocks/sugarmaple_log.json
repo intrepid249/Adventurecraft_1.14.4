@@ -1,0 +1,42 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "adventurecraft:sugarmaple_log"
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        },
+        {
+          "condition": "minecraft:match_tool",
+          "predicate": {
+            "tag": "adventurecraft:axe"
+          }
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "adventurecraft:treesap"
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:match_tool",
+          "predicate": {
+            "item": "adventurecraft:wooden_treetap"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -9,8 +9,16 @@
   "item.adventurecraft.treesap": "Tree Sap",
 
   "block.adventurecraft.sugarmaple_log": "Sugarmaple Log",
+  "block.adventurecraft.sugarmaple_planks": "Sugarmaple Planks",
+
+
 
   "itemgroup.adventurecraft_misc": "Adventurecraft Misc Items",
   "itemgroup.adventurecraft_tools": "Adventurecraft Tools",
-  "itemgroup.adventurecraft_building": "Adventurecraft Building Blocks"
+  "itemgroup.adventurecraft_building": "Adventurecraft Building Blocks",
+
+
+
+  "advancements.adventurecraft.story.root.title": "Tree Puncher",
+  "advancements.adventurecraft.story.root.description": "*Slow Clap* What, did you think you \"Got wood\" or something?"
 }

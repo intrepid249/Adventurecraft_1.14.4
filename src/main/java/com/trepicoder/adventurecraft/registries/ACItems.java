@@ -23,6 +23,7 @@ public class ACItems {
     //region Item Blocks
     //region Wood
     public static Item sugarmaple_log;
+    public static Item sugarmaple_planks;
     //endregion
     //endregion
 }

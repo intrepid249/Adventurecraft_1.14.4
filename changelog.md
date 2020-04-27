@@ -1,10 +1,11 @@
 # Changelog
 
-## Version 1.0.0
+## ALPHA 1.0.0
 
 ### Blocks
 
 - Added Sugarmaple Logs
+- Added Sugarmaple Planks
 
 ### Items
 
@@ -18,8 +19,14 @@
 ### Loot Drops
 
 - Added loot drop for Plant Fibres from Grass
+- Added loot drop for Treesap from Sugarmaple Logs
 
 ### Recipes
 
 - Added recipe for Flint Hatchet
-- Added recipe for twine
+- Added recipe for Twine
+- Added recipe for Wooden Treetap
+
+## Advancements
+
+- Added 'Tree Puncher'
