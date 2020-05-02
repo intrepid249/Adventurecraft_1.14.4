@@ -3,19 +3,31 @@
   "item.adventurecraft.flint_knife": "Flint Knife",
   "item.adventurecraft.wooden_treetap": "Trazoo",
 
-
   "item.adventurecraft.plantfibres": "Plant Fibres",
   "item.adventurecraft.twine": "Plant Twine",
   "item.adventurecraft.treesap": "Tree Sap",
+  "item.adventurecraft.stickbundle": "Stick Bundle",
+
+
 
   "block.adventurecraft.sugarmaple_log": "Sugarmaple Log",
   "block.adventurecraft.sugarmaple_planks": "Sugarmaple Planks",
+  "block.adventurecraft.sugarmaple_leaves": "Sugarmaple Leaves",
+
+  "block.adventurecraft.campfire": "Campfire",
+  "block.adventurecraft.acacia_chopping_block": "Acacia Chopping Block",
+  "block.adventurecraft.birch_chopping_block": "Birch Chopping Block",
+  "block.adventurecraft.dark_oak_chopping_block": "Dark Oak Chopping Block",
+  "block.adventurecraft.jungle_chopping_block": "Jungle Chopping Block",
+  "block.adventurecraft.oak_chopping_block": "Oak Chopping Block",
+  "block.adventurecraft.spruce_chopping_block": "Spruce Chopping Block",
+  "block.adventurecraft.sugarmaple_chopping_block": "Sugarmaple Chopping Block",
 
 
 
-  "itemgroup.adventurecraft_misc": "Adventurecraft Misc Items",
-  "itemgroup.adventurecraft_tools": "Adventurecraft Tools",
-  "itemgroup.adventurecraft_building": "Adventurecraft Building Blocks",
+  "itemGroup.adventurecraft_misc": "Adventurecraft Misc Items",
+  "itemGroup.adventurecraft_tools": "Adventurecraft Tools",
+  "itemGroup.adventurecraft_building": "Adventurecraft Building Blocks",
 
 
 

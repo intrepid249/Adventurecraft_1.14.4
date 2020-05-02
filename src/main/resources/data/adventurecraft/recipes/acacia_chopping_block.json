@@ -1,0 +1,10 @@
+{
+  "type": "crafting_shapeless",
+  "ingredients": [
+    {"item": "minecraft:acacia_log"},
+    {"tag": "adventurecraft:axes"}
+  ],
+  "result": {
+    "item": "adventurecraft:acacia_chopping_block"
+  }
+}

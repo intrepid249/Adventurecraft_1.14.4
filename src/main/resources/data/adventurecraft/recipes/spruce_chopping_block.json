@@ -1,0 +1,10 @@
+{
+  "type": "crafting_shapeless",
+  "ingredients": [
+    {"item": "minecraft:spruce_log"},
+    {"tag": "adventurecraft:axes"}
+  ],
+  "result": {
+    "item": "adventurecraft:spruce_chopping_block"
+  }
+}

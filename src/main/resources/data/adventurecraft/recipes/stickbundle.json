@@ -1,18 +1,15 @@
 {
   "type": "crafting_shaped",
   "pattern": [
-    " x",
-    "x@"
+    "xx",
+    "xx"
   ],
   "key": {
     "x": {
       "tag": "adventurecraft:sticks"
-    },
-    "@": {
-      "item": "adventurecraft:twine"
     }
   },
   "result": {
-    "item": "adventurecraft:wooden_treetap"
+    "item": "adventurecraft:stickbundle"
   }
 }

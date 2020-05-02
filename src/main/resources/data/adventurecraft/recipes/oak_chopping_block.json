@@ -1,0 +1,10 @@
+{
+  "type": "crafting_shapeless",
+  "ingredients": [
+    {"item": "minecraft:oak_log"},
+    {"tag": "adventurecraft:axes"}
+  ],
+  "result": {
+    "item": "adventurecraft:oak_chopping_block"
+  }
+}

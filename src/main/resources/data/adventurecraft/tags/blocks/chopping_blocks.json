@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+    "adventurecraft:acacia_chopping_block",
+    "adventurecraft:birch_chopping_block",
+    "adventurecraft:dark_oak_chopping_block",
+    "adventurecraft:jungle_chopping_block",
+    "adventurecraft:oak_chopping_block",
+    "adventurecraft:spruce_chopping_block",
+    "adventurecraft:sugarmaple_chopping_block"
+  ]
+}

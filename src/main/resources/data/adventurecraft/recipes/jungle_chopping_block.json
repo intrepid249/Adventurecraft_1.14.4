@@ -1,0 +1,10 @@
+{
+  "type": "crafting_shapeless",
+  "ingredients": [
+    {"item": "minecraft:jungle_log"},
+    {"tag": "adventurecraft:axes"}
+  ],
+  "result": {
+    "item": "adventurecraft:jungle_chopping_block"
+  }
+}

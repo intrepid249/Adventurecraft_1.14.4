@@ -1,6 +1,7 @@
 package com.trepicoder.adventurecraft;
 
 import com.trepicoder.adventurecraft.events.BlockEvents;
+import com.trepicoder.adventurecraft.registries.ACBlockColors;
 import net.minecraft.advancements.Advancement;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.util.ResourceLocation;
@@ -41,6 +42,7 @@ public class Adventurecraft {
      */
     public void clientSetup(FMLClientSetupEvent event) {
         LOGGER.info("\n\n============\nClient setup...\n============\n\n");
+//        ACBlockColors.registerBlockColors();
     }
 
     @SubscribeEvent

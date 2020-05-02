@@ -1,0 +1,25 @@
+{
+  "type": "crafting_shaped",
+  "pattern": [
+    " L ",
+    "SFS",
+    "CCC"
+  ],
+  "key": {
+    "L": {
+      "tag": "adventurecraft:logs"
+    },
+    "S": {
+      "item": "adventurecraft:stickbundle"
+    },
+    "F": {
+      "tag": "adventurecraft:plantfibres"
+    },
+    "C": {
+      "tag": "adventurecraft:cobblestones"
+    }
+  },
+  "result": {
+    "item": "adventurecraft:campfire"
+  }
+}

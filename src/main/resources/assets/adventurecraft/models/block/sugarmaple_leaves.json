@@ -1,0 +1,6 @@
+{
+  "parent": "block/leaves",
+  "textures": {
+    "all": "adventurecraft:block/sugarmaple_leaves"
+  }
+}

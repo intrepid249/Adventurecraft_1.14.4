@@ -1,0 +1,10 @@
+{
+  "type": "crafting_shapeless",
+  "ingredients": [
+    {"item": "adventurecraft:sugarmaple_log"},
+    {"tag": "adventurecraft:axes"}
+  ],
+  "result": {
+    "item": "adventurecraft:sugarmaple_chopping_block"
+  }
+}

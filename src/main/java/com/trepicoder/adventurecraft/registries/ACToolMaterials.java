@@ -7,7 +7,7 @@ import net.minecraft.item.crafting.Ingredient;
 
 public enum ACToolMaterials implements IItemTier {
     // The higher the enchantability the more enchantments you can put on it
-    WOOD(0, 0.3f, 4, 1, 3, null),
+    WOOD(0, 0.3f, 1, 1, 3, null),
     FLINT(2, 0.6f, 20, 1, 7, Items.FLINT);
 
     private float m_attackDamage, m_efficiency;
