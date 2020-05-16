@@ -3,16 +3,14 @@ package com.trepicoder.adventurecraft.events;
 import com.trepicoder.adventurecraft.Adventurecraft;
 import com.trepicoder.adventurecraft.blocks.ACCampfire;
 import com.trepicoder.adventurecraft.blocks.ACChoppingBlock;
+import com.trepicoder.adventurecraft.blocks.ACFirewood;
 import com.trepicoder.adventurecraft.blocks.ACWoodLogBlock;
 import com.trepicoder.adventurecraft.registries.ACBlocks;
 import com.trepicoder.adventurecraft.registries.ACItemGroup;
 import com.trepicoder.adventurecraft.registries.ACItems;
 import com.trepicoder.adventurecraft.registries.ACToolMaterials;
 import com.trepicoder.adventurecraft.tools.ACWoodenTreetap;
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.LeavesBlock;
-import net.minecraft.block.SoundType;
+import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.color.BlockColors;
 import net.minecraft.client.renderer.color.IBlockColor;
@@ -22,7 +20,6 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.*;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.FoliageColors;
-import net.minecraft.world.biome.BiomeColors;
 import net.minecraftforge.client.event.ColorHandlerEvent;
 import net.minecraftforge.common.ToolType;
 import net.minecraftforge.event.RegistryEvent;
@@ -89,6 +86,12 @@ public class RegistryEvents {
                         .setRegistryName(location("sugarmaple_planks")),
                 ACItems.sugarmaple_leaves = new BlockItem(ACBlocks.sugarmaple_leaves, new Item.Properties().group(ACItemGroup.BUILDINGBLOCKS))
                         .setRegistryName(location("sugarmaple_leaves")),
+//                ACItems.sugarmaple_sapling = new BlockItem(ACBlocks.sugarmaple_sapling, new Item.Properties().group(ACItemGroup.MISC))
+//                        .setRegistryName(location("sugarmaple_sapling")),
+                ACItems.firewood_fresh = new BlockItem(ACBlocks.firewood_fresh, new Item.Properties().group(ACItemGroup.BUILDINGBLOCKS))
+                        .setRegistryName(location("firewood_fresh")),
+                ACItems.firewood_seasoned = new BlockItem(ACBlocks.firewood_seasoned, new Item.Properties().group(ACItemGroup.BUILDINGBLOCKS))
+                        .setRegistryName(location("firewood_seasoned")),
                 //endregion
 
                 //region Tile Entities
@@ -125,7 +128,14 @@ public class RegistryEvents {
 
                 ACBlocks.sugarmaple_leaves = new LeavesBlock(Block.Properties.create(Material.LEAVES).hardnessAndResistance(0.2f).sound(SoundType.PLANT).tickRandomly())
                         .setRegistryName(location("sugarmaple_leaves")),
-                //endregion
+
+//                ACBlocks.sugarmaple_sapling = new ACSugarmapleSapling().setRegistryName(location("sugarmaple_sapling")),
+                        //endregion
+
+                ACBlocks.firewood_fresh = new ACFirewood(Block.Properties.create(Material.WOOD).hardnessAndResistance(1.0f).sound(SoundType.WOOD))
+                        .setRegistryName(location("firewood_fresh")),
+                ACBlocks.firewood_seasoned = new ACFirewood(Block.Properties.create(Material.WOOD).hardnessAndResistance(1.0f).sound(SoundType.WOOD))
+                        .setRegistryName(location("firewood_seasoned")),
 
                 //region Tile Entities
                 ACBlocks.campfire = new ACCampfire(Block.Properties.create(Material.WOOD)

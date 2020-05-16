@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": {"model": "adventurecraft:block/firewood_seasoned"},
+    "facing=south": {"model": "adventurecraft:block/firewood_seasoned", "y": 90},
+    "facing=east": {"model": "adventurecraft:block/firewood_seasoned", "y": 180},
+    "facing=west": {"model": "adventurecraft:block/firewood_seasoned", "y": 270}
+  }
+}

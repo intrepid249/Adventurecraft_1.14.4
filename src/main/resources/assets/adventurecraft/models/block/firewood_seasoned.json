@@ -1,0 +1,57 @@
+{
+	"parent": "block/block",
+	"textures": {
+		"0": "adventurecraft:block/firewood_seasoned_top",
+		"1": "adventurecraft:block/firewood_seasoned_end",
+		"2": "adventurecraft:block/firewood_seasoned_side",
+		"particle": "adventurecraft:block/firewood_seasoned_top"
+	},
+	"elements": [
+		{
+			"name": "Log2",
+			"from": [9, 0, 0],
+			"to": [16, 4, 16],
+			"faces": {
+				"north": {"uv": [0, 8, 16, 16], "texture": "#1"},
+				"east": {"uv": [0, 12, 16, 16], "texture": "#2"},
+				"south": {"uv": [0, 8, 16, 16], "texture": "#1"},
+				"west": {"uv": [0, 12, 16, 16], "texture": "#2"},
+				"up": {"uv": [0, 0, 8, 16], "texture": "#0"},
+				"down": {"uv": [0, 12, 16, 16], "rotation": 90, "texture": "#2"}
+			}
+		},
+		{
+			"name": "Log1",
+			"from": [0, 0, 0],
+			"to": [7, 4, 16],
+			"faces": {
+				"north": {"uv": [0, 8, 16, 16], "texture": "#1"},
+				"east": {"uv": [0, 12, 16, 16], "texture": "#2"},
+				"south": {"uv": [0, 8, 16, 16], "texture": "#1"},
+				"west": {"uv": [0, 12, 16, 16], "texture": "#2"},
+				"up": {"uv": [0, 0, 8, 16], "texture": "#0"},
+				"down": {"uv": [0, 12, 16, 16], "rotation": 90, "texture": "#2"}
+			}
+		},
+		{
+			"name": "Log3",
+			"from": [4, 4, 0],
+			"to": [12, 8, 16],
+			"faces": {
+				"north": {"uv": [0, 8, 16, 16], "texture": "#1"},
+				"east": {"uv": [0, 12, 16, 16], "texture": "#2"},
+				"south": {"uv": [0, 8, 16, 16], "texture": "#1"},
+				"west": {"uv": [0, 12, 16, 16], "texture": "#2"},
+				"up": {"uv": [0, 0, 8, 16], "texture": "#0"},
+				"down": {"uv": [0, 12, 16, 16], "rotation": 90, "texture": "#2"}
+			}
+		}
+	],
+	"groups": [
+		{
+			"name": "base",
+			"origin": [8, 8, 8],
+			"children": [0, 1, 2]
+		}
+	]
+}

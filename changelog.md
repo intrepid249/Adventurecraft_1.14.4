@@ -1,5 +1,33 @@
 # Changelog
 
+## ALPHA 1.0 2
+
+## Blocks
+
+- Added Fresh firewood
+- Added Seasoned firewood
+- Fixed colliders for chopping block models
+- Fixed blockstate for Sugarmaple Chopping Block
+
+## Items
+
+- Added Fresh firewood
+- Added Seasoned firewood
+
+## Loot Drops
+
+- Added loot drop for fresh firewood
+- Added loot drop for seasoned firewood
+
+## WIP
+
+- Sugarmaple Tree generation
+- Sugarmaple Sapling
+- Woodpile Tile Entity
+- Chopping Block Tile Entity
+
+---
+
 ## ALPHA 1.0.1
 
 ### Blocks

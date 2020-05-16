@@ -1,6 +1,5 @@
 package com.trepicoder.adventurecraft.registries;
 
-import net.minecraft.client.renderer.color.BlockColors;
 import net.minecraft.item.Item;
 
 public class ACItems {
@@ -27,6 +26,9 @@ public class ACItems {
     public static Item sugarmaple_log;
     public static Item sugarmaple_planks;
     public static Item sugarmaple_leaves;
+    public static Item sugarmaple_sapling;
+    public static Item firewood_fresh;
+    public static Item firewood_seasoned;
     //endregion
 
     //region Tile Entities

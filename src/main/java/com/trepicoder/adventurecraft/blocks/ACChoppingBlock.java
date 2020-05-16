@@ -19,6 +19,6 @@ public class ACChoppingBlock extends Block {
     @Override
     @SuppressWarnings("deprecation")
     public VoxelShape getShape(BlockState state, IBlockReader worldIn, BlockPos pos, ISelectionContext context) {
-        return VoxelShapes.create(0, 0, 0, 16, 5, 16);
+        return VoxelShapes.create(0, 0, 0, 1, 0.3125f, 1);
     }
 }

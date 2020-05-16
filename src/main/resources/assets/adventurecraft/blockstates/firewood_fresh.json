@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": {"model": "adventurecraft:block/firewood_fresh"},
+    "facing=south": {"model": "adventurecraft:block/firewood_fresh", "y": 90},
+    "facing=east": {"model": "adventurecraft:block/firewood_fresh", "y": 180},
+    "facing=west": {"model": "adventurecraft:block/firewood_fresh", "y": 270}
+  }
+}

@@ -8,6 +8,9 @@ public class ACBlocks {
     public static Block sugarmaple_log;
     public static Block sugarmaple_planks;
     public static Block sugarmaple_leaves;
+    public static Block sugarmaple_sapling;
+    public static Block firewood_fresh;
+    public static Block firewood_seasoned;
     //endregion
 
     //region Tile Entities
