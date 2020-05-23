@@ -1,5 +1,26 @@
 # Changelog
 
+## ALPHA 1.0.3
+
+## Blocks
+
+- Added Woodpile
+- Modified campfire model
+
+## Items
+
+- Added Woodpile
+
+## Loot Drops
+
+- Added loot drop for wood pile
+
+## WIP
+
+- Started work on GUI Tile entitiy for Chopping Blocks
+
+---
+
 ## ALPHA 1.0 2
 
 ## Blocks

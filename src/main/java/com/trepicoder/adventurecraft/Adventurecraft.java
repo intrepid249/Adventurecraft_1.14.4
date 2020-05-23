@@ -1,8 +1,11 @@
 package com.trepicoder.adventurecraft;
 
+import com.trepicoder.adventurecraft.blocks.tileentities.ACChoppingBlockTEScreen;
 import com.trepicoder.adventurecraft.events.BlockEvents;
 import com.trepicoder.adventurecraft.registries.ACBlockColors;
+import com.trepicoder.adventurecraft.registries.ACTileEntities;
 import net.minecraft.advancements.Advancement;
+import net.minecraft.client.gui.ScreenManager;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.MinecraftForge;
@@ -43,6 +46,8 @@ public class Adventurecraft {
     public void clientSetup(FMLClientSetupEvent event) {
         LOGGER.info("\n\n============\nClient setup...\n============\n\n");
 //        ACBlockColors.registerBlockColors();
+
+        ScreenManager.registerFactory(ACTileEntities.CHOPPING_BLOCK_CONTAINER, ACChoppingBlockTEScreen::new);
     }
 
     @SubscribeEvent

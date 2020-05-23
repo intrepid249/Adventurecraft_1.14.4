@@ -1,0 +1,22 @@
+{
+  "type": "crafting_shaped",
+  "pattern": [
+    "L L",
+    "S S",
+    "L#L"
+  ],
+  "key": {
+    "L": {
+      "tag": "adventurecraft:logs"
+    },
+    "S": {
+      "tag": "adventurecraft:sticks"
+    },
+    "#": {
+      "tag": "adventurecraft:slabs"
+    }
+  },
+  "result": {
+    "item": "adventurecraft:woodpile"
+  }
+}

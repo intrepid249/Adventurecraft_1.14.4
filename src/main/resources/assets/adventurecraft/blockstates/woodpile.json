@@ -1,0 +1,23 @@
+{
+  "variants": {
+    "facing=north,fullness=empty": { "model": "adventurecraft:block/woodpile"},
+    "facing=east,fullness=empty": { "model": "adventurecraft:block/woodpile", "y": 90 },
+    "facing=south,fullness=empty": { "model": "adventurecraft:block/woodpile", "y": 180 },
+    "facing=west,fullness=empty": { "model": "adventurecraft:block/woodpile", "y": 270 },
+
+    "facing=north,fullness=shallow": { "model": "adventurecraft:block/woodpile_1"},
+    "facing=east,fullness=shallow": { "model": "adventurecraft:block/woodpile_1", "y": 90 },
+    "facing=south,fullness=shallow": { "model": "adventurecraft:block/woodpile_1", "y": 180 },
+    "facing=west,fullness=shallow": { "model": "adventurecraft:block/woodpile_1", "y": 270 },
+
+    "facing=north,fullness=half": { "model": "adventurecraft:block/woodpile_2"},
+    "facing=east,fullness=half": { "model": "adventurecraft:block/woodpile_2", "y": 90 },
+    "facing=south,fullness=half": { "model": "adventurecraft:block/woodpile_2", "y": 180 },
+    "facing=west,fullness=half": { "model": "adventurecraft:block/woodpile_2", "y": 270 },
+
+    "facing=north,fullness=full": { "model": "adventurecraft:block/woodpile_3"},
+    "facing=east,fullness=full": { "model": "adventurecraft:block/woodpile_3", "y": 90 },
+    "facing=south,fullness=full": { "model": "adventurecraft:block/woodpile_3", "y": 180 },
+    "facing=west,fullness=full": { "model": "adventurecraft:block/woodpile_3", "y": 270 }
+  }
+}

@@ -1,27 +1,30 @@
 package com.trepicoder.adventurecraft.events;
 
 import com.trepicoder.adventurecraft.Adventurecraft;
-import com.trepicoder.adventurecraft.blocks.ACCampfire;
-import com.trepicoder.adventurecraft.blocks.ACChoppingBlock;
-import com.trepicoder.adventurecraft.blocks.ACFirewood;
-import com.trepicoder.adventurecraft.blocks.ACWoodLogBlock;
-import com.trepicoder.adventurecraft.registries.ACBlocks;
-import com.trepicoder.adventurecraft.registries.ACItemGroup;
-import com.trepicoder.adventurecraft.registries.ACItems;
-import com.trepicoder.adventurecraft.registries.ACToolMaterials;
+import com.trepicoder.adventurecraft.blocks.*;
+import com.trepicoder.adventurecraft.blocks.tileentities.ACChoppingBlockTE;
+import com.trepicoder.adventurecraft.blocks.tileentities.ACChoppingBlockTEContainer;
+import com.trepicoder.adventurecraft.registries.*;
 import com.trepicoder.adventurecraft.tools.ACWoodenTreetap;
 import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
+import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.color.BlockColors;
 import net.minecraft.client.renderer.color.IBlockColor;
 import net.minecraft.client.renderer.color.IItemColor;
 import net.minecraft.client.renderer.color.ItemColors;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.inventory.container.ContainerType;
 import net.minecraft.item.*;
+import net.minecraft.tileentity.TileEntityType;
 import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.FoliageColors;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.client.event.ColorHandlerEvent;
 import net.minecraftforge.common.ToolType;
+import net.minecraftforge.common.extensions.IForgeContainerType;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -97,6 +100,7 @@ public class RegistryEvents {
                 //region Tile Entities
                 ACItems.campfire = new BlockItem(ACBlocks.campfire, new Item.Properties().group(ACItemGroup.MISC))
                         .setRegistryName(location("campfire")),
+
                 ACItems.acacia_chopping_block = new BlockItem(ACBlocks.acacia_chopping_block, new Item.Properties().group(ACItemGroup.BUILDINGBLOCKS))
                         .setRegistryName(location("acacia_chopping_block")),
                 ACItems.birch_chopping_block = new BlockItem(ACBlocks.birch_chopping_block, new Item.Properties().group(ACItemGroup.BUILDINGBLOCKS))
@@ -110,7 +114,10 @@ public class RegistryEvents {
                 ACItems.spruce_chopping_block = new BlockItem(ACBlocks.spruce_chopping_block, new Item.Properties().group(ACItemGroup.BUILDINGBLOCKS))
                         .setRegistryName(location("spruce_chopping_block")),
                 ACItems.sugarmaple_chopping_block = new BlockItem(ACBlocks.sugarmaple_chopping_block, new Item.Properties().group(ACItemGroup.BUILDINGBLOCKS))
-                        .setRegistryName(location("sugarmaple_chopping_block"))
+                        .setRegistryName(location("sugarmaple_chopping_block")),
+
+                ACItems.woodpile = new BlockItem(ACBlocks.woodpile, new Item.Properties().group(ACItemGroup.BUILDINGBLOCKS))
+                        .setRegistryName(location("woodpile"))
                 //endregion
                 //endregion
         );
@@ -121,34 +128,59 @@ public class RegistryEvents {
         event.getRegistry().registerAll(
                 //region Wood
                 ACBlocks.sugarmaple_log = new ACWoodLogBlock(Block.Properties.create(Material.WOOD)
-                        .hardnessAndResistance(2.0f).sound(SoundType.WOOD).harvestTool(ToolType.AXE)).setRegistryName(location("sugarmaple_log")),
+                        .hardnessAndResistance(2.0f).sound(SoundType.WOOD).harvestTool(ToolType.AXE)).setRegistryName(RegistryEvents.location("sugarmaple_log")),
 
                 ACBlocks.sugarmaple_planks = new Block(Block.Properties.create(Material.WOOD)
-                        .hardnessAndResistance(2.0f).sound(SoundType.WOOD).harvestTool(ToolType.AXE)).setRegistryName(location("sugarmaple_planks")),
+                        .hardnessAndResistance(2.0f).sound(SoundType.WOOD).harvestTool(ToolType.AXE)).setRegistryName(RegistryEvents.location("sugarmaple_planks")),
 
                 ACBlocks.sugarmaple_leaves = new LeavesBlock(Block.Properties.create(Material.LEAVES).hardnessAndResistance(0.2f).sound(SoundType.PLANT).tickRandomly())
-                        .setRegistryName(location("sugarmaple_leaves")),
+                        .setRegistryName(RegistryEvents.location("sugarmaple_leaves")),
 
 //                ACBlocks.sugarmaple_sapling = new ACSugarmapleSapling().setRegistryName(location("sugarmaple_sapling")),
-                        //endregion
+                //endregion
 
                 ACBlocks.firewood_fresh = new ACFirewood(Block.Properties.create(Material.WOOD).hardnessAndResistance(1.0f).sound(SoundType.WOOD))
-                        .setRegistryName(location("firewood_fresh")),
+                        .setRegistryName(RegistryEvents.location("firewood_fresh")),
                 ACBlocks.firewood_seasoned = new ACFirewood(Block.Properties.create(Material.WOOD).hardnessAndResistance(1.0f).sound(SoundType.WOOD))
-                        .setRegistryName(location("firewood_seasoned")),
+                        .setRegistryName(RegistryEvents.location("firewood_seasoned")),
 
                 //region Tile Entities
-                ACBlocks.campfire = new ACCampfire(Block.Properties.create(Material.WOOD)
-                        .hardnessAndResistance(1.0f).sound(SoundType.WOOD).harvestTool(ToolType.AXE)).setRegistryName(location("campfire")),
-                ACBlocks.acacia_chopping_block = new ACChoppingBlock().setRegistryName(location("acacia_chopping_block")),
-                ACBlocks.birch_chopping_block = new ACChoppingBlock().setRegistryName(location("birch_chopping_block")),
-                ACBlocks.dark_oak_chopping_block = new ACChoppingBlock().setRegistryName(location("dark_oak_chopping_block")),
-                ACBlocks.jungle_chopping_block = new ACChoppingBlock().setRegistryName(location("jungle_chopping_block")),
-                ACBlocks.oak_chopping_block = new ACChoppingBlock().setRegistryName(location("oak_chopping_block")),
-                ACBlocks.spruce_chopping_block = new ACChoppingBlock().setRegistryName(location("spruce_chopping_block")),
-                ACBlocks.sugarmaple_chopping_block = new ACChoppingBlock().setRegistryName(location("sugarmaple_chopping_block"))
+                ACBlocks.campfire = new ACCampfire().setRegistryName(RegistryEvents.location("campfire")),
+
+                ACBlocks.acacia_chopping_block = new ACChoppingBlock().setRegistryName(RegistryEvents.location("acacia_chopping_block")),
+                ACBlocks.birch_chopping_block = new ACChoppingBlock().setRegistryName(RegistryEvents.location("birch_chopping_block")),
+                ACBlocks.dark_oak_chopping_block = new ACChoppingBlock().setRegistryName(RegistryEvents.location("dark_oak_chopping_block")),
+                ACBlocks.jungle_chopping_block = new ACChoppingBlock().setRegistryName(RegistryEvents.location("jungle_chopping_block")),
+                ACBlocks.oak_chopping_block = new ACChoppingBlock().setRegistryName(RegistryEvents.location("oak_chopping_block")),
+                ACBlocks.spruce_chopping_block = new ACChoppingBlock().setRegistryName(RegistryEvents.location("spruce_chopping_block")),
+                ACBlocks.sugarmaple_chopping_block = new ACChoppingBlock().setRegistryName(RegistryEvents.location("sugarmaple_chopping_block")),
+
+                ACBlocks.woodpile = new ACWoodpile().setRegistryName(RegistryEvents.location("woodpile"))
                 //endregion
         );
+    }
+
+    @SubscribeEvent
+    public static void registerTileEntities(final RegistryEvent.Register<TileEntityType<?>> event) {
+        event.getRegistry().registerAll(
+                TileEntityType.Builder.create(ACChoppingBlockTE::new, ACBlocks.acacia_chopping_block).build(null).setRegistryName(location("acacia_chopping_block")),
+                TileEntityType.Builder.create(ACChoppingBlockTE::new, ACBlocks.birch_chopping_block).build(null).setRegistryName(location("birch_chopping_block")),
+                TileEntityType.Builder.create(ACChoppingBlockTE::new, ACBlocks.dark_oak_chopping_block).build(null).setRegistryName(location("dark_oak_chopping_block")),
+                TileEntityType.Builder.create(ACChoppingBlockTE::new, ACBlocks.jungle_chopping_block).build(null).setRegistryName(location("jungle_chopping_block")),
+                TileEntityType.Builder.create(ACChoppingBlockTE::new, ACBlocks.oak_chopping_block).build(null).setRegistryName(location("oak_chopping_block")),
+                TileEntityType.Builder.create(ACChoppingBlockTE::new, ACBlocks.spruce_chopping_block).build(null).setRegistryName(location("spruce_chopping_block")),
+                TileEntityType.Builder.create(ACChoppingBlockTE::new, ACBlocks.sugarmaple_chopping_block).build(null).setRegistryName(location("sugarmaple_chopping_block"))
+        );
+    }
+
+    @OnlyIn(Dist.CLIENT)
+    @SubscribeEvent
+    public static void registerContainers(final RegistryEvent.Register<ContainerType<?>> event) {
+        event.getRegistry().register(
+                IForgeContainerType.create((windowId, inv, data) -> {
+                    BlockPos pos = data.readBlockPos();
+                    return new ACChoppingBlockTEContainer(windowId, Minecraft.getInstance().world, pos, inv);
+                }).setRegistryName(location("chopping_block")));
     }
 
     @SubscribeEvent
@@ -180,7 +212,7 @@ public class RegistryEvents {
         itemColors.register(itemBlockColorHandler, ACItems.sugarmaple_leaves);
     }
 
-    private static ResourceLocation location(String name) {
+    public static ResourceLocation location(String name) {
         return new ResourceLocation(MODID, name);
     }
 }

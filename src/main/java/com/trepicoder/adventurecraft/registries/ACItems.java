@@ -33,6 +33,7 @@ public class ACItems {
 
     //region Tile Entities
     public static Item campfire;
+
     public static Item acacia_chopping_block;
     public static Item birch_chopping_block;
     public static Item dark_oak_chopping_block;
@@ -40,6 +41,8 @@ public class ACItems {
     public static Item oak_chopping_block;
     public static Item spruce_chopping_block;
     public static Item sugarmaple_chopping_block;
+
+    public static Item woodpile;
     //endregion
     //endregion
 }

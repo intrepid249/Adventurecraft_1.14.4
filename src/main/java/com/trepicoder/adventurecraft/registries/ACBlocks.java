@@ -15,6 +15,7 @@ public class ACBlocks {
 
     //region Tile Entities
     public static Block campfire;
+
     public static Block acacia_chopping_block;
     public static Block birch_chopping_block;
     public static Block dark_oak_chopping_block;
@@ -22,5 +23,7 @@ public class ACBlocks {
     public static Block oak_chopping_block;
     public static Block spruce_chopping_block;
     public static Block sugarmaple_chopping_block;
+
+    public static Block woodpile;
     //endregion
 }

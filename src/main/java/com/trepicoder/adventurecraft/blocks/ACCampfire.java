@@ -1,10 +1,8 @@
 package com.trepicoder.adventurecraft.blocks;
 
 import com.trepicoder.adventurecraft.utils.VoxelShapeHelper;
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.Blocks;
-import net.minecraft.block.HorizontalBlock;
+import net.minecraft.block.*;
+import net.minecraft.block.material.Material;
 import net.minecraft.item.BlockItemUseContext;
 import net.minecraft.state.StateContainer;
 import net.minecraft.state.properties.BlockStateProperties;
@@ -14,13 +12,14 @@ import net.minecraft.util.math.shapes.VoxelShape;
 import net.minecraft.util.math.shapes.VoxelShapes;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.world.World;
+import net.minecraftforge.common.ToolType;
 
 import javax.annotation.Nullable;
 import java.util.Random;
 
 public class ACCampfire extends HorizontalBlock {
-    public ACCampfire(Properties builder) {
-        super(builder);
+    public ACCampfire() {
+        super(Block.Properties.create(Material.WOOD).hardnessAndResistance(1.0f).sound(SoundType.WOOD).harvestTool(ToolType.AXE));
     }
 
     @Override
